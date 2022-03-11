@@ -9,6 +9,15 @@ function RegularComponent() {
   return <h1>Everyone can see this component.</h1>;
 }
 
+function App({authorized}) {
+  return (
+    <>
+      {authorized ? <SecretComponent /> : <RegularComponent /> }
+    </>
+  );
+}
+
+
 // function App(props) {
 //   return (
 //     <>
@@ -17,11 +26,11 @@ function RegularComponent() {
 //   );
 // }
 
-function App(props) {
-  if(props.authorized)
-    return <SecretComponent />;
-  else
-    return <RegularComponent />;
-}
+// function App(props) {
+//   if(props.authorized)
+//     return <SecretComponent />;
+//   else
+//     return <RegularComponent />;
+// }
 
 export default App;
