@@ -1,7 +1,8 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import "./App.css";
 
 function App() {
+  const [emotion, setEmotion] = useState("happy");
   const [secondary, setSecondary] = useState("tired");
   useEffect(() => {
     console.log(`It's ${emotion} around here!`);
